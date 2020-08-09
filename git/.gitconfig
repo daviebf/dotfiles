@@ -4,6 +4,17 @@
 	email = itsme@davibusanello.net
 [diff]
 	tool = meld
+	noprefix = true
+[diffltool]
+	prompt = true
+[difftool "meld"]
+	trustExitCode = true
+[merge]
+	tool = meld
+[mergetool]
+	prompt = true
+[mergetool "meld"]
+	trustExitCode = true
 [core]
 	pager = less -F -X
 	excludesfile = "~/.gitignore_global"
@@ -16,3 +27,10 @@
 	tree = "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%cr %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit --all"
 [merge]
 	tool = meld
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+; git config --show-origin --get user.email to test
+[includeIf "gitdir/i:~/ToptalProjects/"]
+	path = "~/ToptalProjects/.gitconfig"
