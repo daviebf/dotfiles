@@ -61,10 +61,10 @@
 	tool = meld
 [commit]
 	gpgsign = true
-[gpg]
-	program = /usr/local/bin/gpg
 ; git config --show-origin --get user.email to test
 [includeIf "gitdir/i:~/ToptalProjects/"]
 	path = "~/ToptalProjects/.gitconfig"
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
